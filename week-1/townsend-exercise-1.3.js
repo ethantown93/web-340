@@ -1,3 +1,9 @@
+//Header
+
+var header = require('../header.js');
+console.log(header.display("Ethan", "Townsend", "Exercise 1.3"));
+console.log('\n');
+
 /*
 ============================================
 ; Title:  townsend-exercise-1.3
