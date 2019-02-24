@@ -14,4 +14,5 @@ console.log('\n');
 ;===========================================
 */
 
+// I wasn't sure if we were supposed to create the console.log in an actual .js file. But here it is!
 console.log('You are not in Townsend\'s world!');
