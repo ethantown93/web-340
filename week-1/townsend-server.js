@@ -21,7 +21,7 @@ var http = require("http");
 function processRequest(req, res) {
 
 // server body message
-var body = "Hello! And welcome to my very first NodeJs server, created for WEB-340!";
+var body = "Hello! And welcome to my very first NodeJs server, created for WEB-340.";
 
     var contentLength = body.length;
 
