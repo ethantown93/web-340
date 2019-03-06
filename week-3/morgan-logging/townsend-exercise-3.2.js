@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 // adding the logger
 app.use(logger('short'));
 
-// creating a git request that will return a response
+// creating a get request that will return a response
 app.get('/', function (req, res){
     res.render('index', {
         message: 'Testing testin 1, 2, 3. This is a test!'});
