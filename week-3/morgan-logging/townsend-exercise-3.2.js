@@ -1,3 +1,11 @@
+/*
+============================================
+; Title:  townsend-exercise-3.3.js
+; Author: Professor Krasso
+; Date:   5 March 2019
+; Description: logging requests using morgan
+;===========================================
+*/
 
 var express = require('express');
 var http = require('http');
