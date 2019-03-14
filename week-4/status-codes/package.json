@@ -1,0 +1,8 @@
+{
+    "name": "status-codes",
+    "author": "Ethan Townsend",
+    "private": true,
+    "dependencies": {
+        "express": "^4.16.4"
+    }
+}
