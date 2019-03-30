@@ -1,0 +1,38 @@
+<% include header %>
+<% include navbar %>
+
+<h2>Employee Records</h2><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Employee ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr onClick="window.location.href = '/view'">
+            <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>1</td>
+            </tr>
+        <tr onClick="window.location.href = 'http:localhost:3000/view'">
+            <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>2</td>
+          </tr>
+          <tr  onClick="window.location.href = 'http:localhost:3000/view'">
+            <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+
+    
+    <% include footer %>
+    <% include script %>

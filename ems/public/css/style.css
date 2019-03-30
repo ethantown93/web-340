@@ -1,0 +1,34 @@
+h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.homeh2 {
+    display: inline-block;
+}
+
+.input {
+    text-align: center;
+}
+
+input {
+    display: inline-block;
+    border-radius: 2px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.home {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+tr:hover {
+    opacity: .75;
+    transform: scale( .95);
+    cursor: pointer;
+}
