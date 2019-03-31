@@ -3,35 +3,42 @@
 
 <h2>Employee Records</h2><br>
 
-<table class="table table-striped">
-    <thead>
+<section class='employee-records'>
+    <p>
+        Find all employee information listed below:
+    </p>
+</section>
+
+<div class = 'table-div'>
+    <div class='table'>
+        <table>
         <tr>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Employee ID</th>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
         </tr>
-    </thead>
-    <tbody>
-        <tr onClick="window.location.href = '/view'">
-            <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>1</td>
-            </tr>
-        <tr onClick="window.location.href = 'http:localhost:3000/view'">
-            <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>2</td>
-          </tr>
-          <tr  onClick="window.location.href = 'http:localhost:3000/view'">
-            <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>3</td>
-          </tr>
-        </tbody>
-      </table>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>johndoe@email.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>janedoe@email.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Chuck</td>
+            <td>Norris</td>
+            <td>chucknorris@email.com</td>
+        </tr>
+        </table>
+    </div>
+</div>
 
     
     <% include footer %>

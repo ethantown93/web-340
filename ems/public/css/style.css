@@ -7,28 +7,190 @@ h2 {
     display: inline-block;
 }
 
-.input {
-    text-align: center;
-}
-
-input {
-    display: inline-block;
-    border-radius: 2px;
-}
-
-button:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
 .home {
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-tr:hover {
-    opacity: .75;
+footer {
+    padding-top: 20px;
+}
+
+html {
+    font-family: 'Lato', 'Arial', sans-serif;
+    text-rendering: optimizedLegibility;
+    scroll-behavior: smooth;
+    background-color: rgba(238, 238, 238, 0.637);
+}
+
+/********************************************/
+/********     index.EJS           ***********/
+/********************************************/
+
+.home-1 {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    min-height: 300px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.home-btn {
+    background-color: rgb(70, 70, 211);
+    display:inline-block;
+    border:1px rgb(70, 70, 211);
+    padding: 5px 5px 5px 5px;
+    border-radius:4px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    font-size: 20px;
+    color:white;
+    text-align:center;
+    transition: all 0.2s;
+    width: 14%;
+}
+
+.home-btn:hover {
+    color:#000000;
+    background-color:rgb(19, 19, 209);
+}
+
+/********************************************/
+/********       NEW.EJS           ***********/
+/********************************************/
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=text]:hover {
+      background-color: rgb(238, 238, 238);
+  }
+  
+  input[type=submit] {
+    margin: auto;
+    width: 100%;
+    background-color:rgb(70, 70, 211);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(28, 28, 204);
+  }
+  
+  .new-div {
+    margin: auto;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+/********************************************/
+/********       NAV CSS           ***********/
+/********************************************/
+
+.nav-div {
+    width: 80%;
+    margin: auto;
+    background-color: rgb(70, 70, 211);
+    min-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.main-nav {
+    padding-top: 12px;
+    text-align: left;
+}
+
+nav a:hover {
+    color: rgb(0, 255, 242);
+}
+
+.main-nav li {
+    color: white;
+    font-size: 18px;
+    list-style: none;
+    display: inline-block;
+  
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 9px 4px;
+    color: White;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 1px solid rgb(0, 255, 242);
+    color: rgb(0, 255, 242);
+    transition: color 0.5s;
+}
+
+/********************************************/
+/********          LIST.EJS       ***********/
+/********************************************/
+
+.table-div {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 4px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  tr:hover {
+    opacity: .95;
     transform: scale( .95);
     cursor: pointer;
+}
+
+.employee-records {
+    text-align: center;
+}
+
+.employee-records p {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
 }

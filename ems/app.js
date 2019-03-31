@@ -24,7 +24,7 @@ app.use(logger('short'));
 
 app.get('/', function(req, res) {
     res.render('index', {
-        message: 'Home Page'
+        message: 'WEB-340 Employee Records App'
     });
 });
 
@@ -44,6 +44,14 @@ app.get('/view', function(req, res) {
     res.render('view', {
         message: 'view'
     });
+});
+
+app.get('/contact', function(req, res) {
+    res.render('contact');
+});
+
+app.get('/about', function(req, res) {
+    res.render('about');
 });
 
 http.createServer(app).listen(3000, function(){

@@ -3,13 +3,23 @@
 
 <h2>Add New Employee Data</h2><br>
 
-<div class = 'input' >
-    <input type='text' id='firstName' placeholder= 'First Name'>
-    <input type='text' id='lastName' placeholder= 'Last Name'>
-    <input type='text' id='ID' placeholder= 'Employee ID'>
-    <button type='button' class="btn-primary">Add Data</button>
-</div>
+<div class='new-div'>
+    <form>
+        <label for='firstName'>First Name</label>
+        <input type='text' id='firstName' name='firstName' placeholder='First Name'>
 
+        <label for='lastName'>Last Name</label>
+        <input type='text' id='lastName' name='lastName' placeholder='Last Name'>
+
+        <label for='id'>Email</label>
+        <input type='text' id='email' name='email' placeholder='Email'>
+
+        <label for='id'>Employee ID</label>
+        <input type='text' id='id' name='id' placeholder='Employee ID'>
+
+        <input type='submit' value='Submit'>
+    </form>
+</div>
 
 <% include footer %>
 <% include script %>
