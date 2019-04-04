@@ -7,12 +7,28 @@
 ;===========================================
 */
 
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var logger = require('morgan');
+const express = require('express');
+const http = require('http');
+const path = require('path');
+const logger = require('morgan');
+const Employees = require('./models/employees');
+const mongoose = require('mongoose');
 
-var app = express();
+// establishing the connect to MongoDB
+const mongoDB = 'mongodb+srv://admin:Password1!@ems-rfwnt.mongodb.net/test?retryWrites=true';
+mongoose.connect(mongoDB, {
+    useMongoClient: true
+});
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function () {
+    console.log('Application connected to mLab MongoDB instance');
+});
+
+// initializing express
+
+const app = express();
 
 app.use(express.static(__dirname + '/public'));
 
