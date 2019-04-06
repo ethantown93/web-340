@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  townsend-exercise-7.4
+; Author: Professor Krasso
+; Date:   27 February 2019
+; Modified By: Ethan Townsend
+; Description:  Unit Testing
+;===========================================
+*/
+
 const assert = require('assert');
 
 describe('String#split', function(){

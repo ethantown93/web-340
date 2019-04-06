@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  townsend-exercise-6.3
+; Author: Professor Krasso
+; Date:   27 February 2019
+; Modified By: Ethan Townsend
+; Description:  mongoDB connection
+;===========================================
+*/
+
 var express = require('express');
 var http = require('http');
 var path = require('path');
