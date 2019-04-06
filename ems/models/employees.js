@@ -1,9 +1,9 @@
 /*
 ============================================
-; Title:  fruit.js
+; Title:  employees.js
 ; Author: Ethan Townsend
 ; Date:   4 April 2019
-; Description: File for the Fruit database model
+; Description: File for the employee database model
 ;===========================================
 */
 
