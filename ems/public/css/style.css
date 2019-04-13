@@ -171,7 +171,6 @@ table {
   
   tr:hover {
     opacity: .95;
-    transform: scale( .95);
     cursor: pointer;
 }
 

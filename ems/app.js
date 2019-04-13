@@ -68,7 +68,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
     res.render('index', {
-        message: 'WEB-340 Employee Records App'
+        title: 'EMS | Home'
     });
 });
 
@@ -77,7 +77,7 @@ app.get('/list', function(req, res){
         if(err){ throw err; 
         } else {
         res.render('list', {
-            title: 'Employee Data', 
+            title: 'EMS | Employee Data', 
             employees: employees
         })
     };
@@ -86,49 +86,63 @@ app.get('/list', function(req, res){
 
 app.get('/new', function(req, res) {
     res.render('new', {
-        message: "New Employee"
+        title: "EMS | New Employee"
     });
 });
 
 app.get('/view', function(req, res) {
     res.render('view', {
-        message: 'view'
+        title: 'EMS | View'
     });
 });
 
 app.get('/contact', function(req, res) {
-    res.render('contact');
+    res.render('contact', {
+        title: 'EMS | Contact'
+    });
+    
 });
 
 app.get('/about', function(req, res) {
-    res.render('about');
+    res.render('about',{
+        title: 'EMS | About'
+    });
 });
 
-//post requests
+//post requests that processes form submissions and saves them to the database.
 
 app.post('/process', function(req, res) {
     // console.log(request.body.txtName);
-    if (!req.body.txtName) {
-      res.status(400).send('Entries must have a name');
-      return;
+    if (!req.body.firstName) {
+        res.status(400).send('Entries must have a first name.');
+        return;
+    } else if(!req.body.lastName) {
+        res.status(404).send('Entries must have a last name.')
+        return;
+    } else if(!req.body.email) {
+        res.status(400).send('Entries must have an email.')
+        return;
+    } else if(!req.body.id) {
+        res.status(400).send('Entries must have an employee ID.')
+        return;
     }
-  
+
     // get the request's form data
-    const firstName = req.body.txtName;
+    const firstName = req.body.firstName;
     console.log(firstName);
-    const lastName = req.body.txtName1;
+    const lastName = req.body.lastName;
     console.log(lastName)
-    const email1 = req.body.txtName2;
-    console.log(email1)
-    const ID1 = req.body.txtName3;
-    console.log(ID1)
+    const email = req.body.email;
+    console.log(email)
+    const ID = req.body.id;
+    console.log(ID)
   
     // create a fruit model
     let employees = new Employees({
       first: firstName,
       last: lastName,
-      email: email1,
-      ID: ID1
+      email: email,
+      ID: ID
 
     });
   
@@ -144,33 +158,28 @@ app.post('/process', function(req, res) {
     });
   });
 
-/*
-app.post('/process', function(req, res){
-
-
-    const first = req.body.firstName;
-    const last = req.body.lastName;
-    const eml = req.body.email;
-    const ident = req.body.id;
-
-    let employees = new Employees({
-        first: first,
-        last: last,
-        eml: eml,
-        ident: ident
-    });
+  app.get('/view/:queryName', function(req, res) {
+    const queryName = req.params['queryName'];
     
-    employees.save(function(err){
-        if(err) { throw err; 
+    Employees.find({'first': queryName}, function(err, employees) {
+        if(err) {
+            console.log(err);
+            throw err;
         } else {
-        console.log('Data successfully saved.');
-        res.redirect('/');
-        }
-    });
-    
-});
-*/
+            console.log(employees);
 
+            if(employees.length > 0) {
+                res.render('view', {
+                    title: 'EMS | View',
+                    employee: employees
+                })
+            } else {
+                res.redirect('/');
+            }
+        }
+    })
+});
+  
 
 // server creation
 
