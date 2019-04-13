@@ -120,7 +120,7 @@ input[type=text], select {
 }
 
 .main-nav {
-    padding-top: 12px;
+    padding: 5px 15px;
     text-align: left;
 }
 
@@ -130,9 +130,12 @@ nav a:hover {
 
 .main-nav li {
     color: white;
-    font-size: 18px;
+    padding-right: 10px;
+    padding-left: 0px;
+    font-size: 16px;
     list-style: none;
     display: inline-block;
+    
   
 }
 .main-nav li a:link,
@@ -155,18 +158,9 @@ nav a:hover {
 /********          LIST.EJS       ***********/
 /********************************************/
 
-.table-div {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
 table {
     font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
     border: 2px solid black;
-    border-radius: 4px;
   }
   
   td, th {
@@ -175,10 +169,6 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-
   tr:hover {
     opacity: .95;
     transform: scale( .95);
