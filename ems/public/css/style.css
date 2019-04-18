@@ -163,10 +163,10 @@ table {
     border: 2px solid black;
   }
   
-  td, th {
-    border: 1px solid #dddddd;
+  td {
     text-align: left;
     padding: 8px;
+    color: rgb(240, 240, 240);
   }
   
   tr:hover {
